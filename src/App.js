@@ -20,15 +20,24 @@ function App() {
     */
     const Counter1 = () => {
         const [count, increment] = useIncrement(1);
-        return (
-            <div>Count: {count} <br/>
+        return (<div>Count: {count} <br/>
                 <button onClick={increment}>Increase</button>
             </div>
 
         );
     }
+    const Counter2 = () => {
+        const [count, increment] = useIncrement(2);
+        return (<div>Count: {count} <br/>
+                <button onClick={increment}>Increase</button>
+            </div>
 
-    return (<Counter1/>);
+        );
+    }
+    return (<div>
+        <Counter1/>
+        <Counter2/>
+    </div>);
 }
 
 export default App;
